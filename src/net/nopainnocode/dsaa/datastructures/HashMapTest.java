@@ -34,21 +34,20 @@ public class HashMapTest {
 
         HashMapTest hashMapTest = new HashMapTest();
         System.out.printf("The size of the HashMap is "
-                + hashMapTest.putTestData());
+                + hashMapTest.putTestData() + "\n");
 
         // return the before value
-        System.out.printf("\nThe return value of putting exist key value is "
-                + hashMapTest.getReturnValueOfPuttingExistKeyValue());
+        System.out.printf("The return value of putting exist key value is "
+                + hashMapTest.getReturnValueOfPuttingExistKeyValue() + "\n");
 
-        Set keySet = hashMapTest.getHashMap().keySet();
-        Iterator iter = keySet.iterator();
+        Iterator iter = hashMapTest.getHashMap().keySet().iterator();
 
         while(iter.hasNext()) {
 
             Object key = iter.next();
             Object value = hashMapTest.getHashMap().get(key);
 
-            System.out.printf("\nkey : " + key + " value : " + value);
+            System.out.printf("key : " + key + " value : " + value + "\n");
         }
     }
 
