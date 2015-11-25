@@ -43,6 +43,11 @@ public class ImplementedQueue<E>{
         outStack.clear();
     }
 
+    public int size() {
+
+        return inStack.size() + outStack.size();
+    }
+
     private void inToOut() {
         if(outStack.empty())
             for (E element : inStack)
