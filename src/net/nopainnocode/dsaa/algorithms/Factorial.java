@@ -21,7 +21,6 @@ public class Factorial {
         int n = new Scanner(System.in).nextInt();
 
         System.out.printf("The factorial value of " + n + " is " + doFactorial(n));
+
     }
-
-
 }
