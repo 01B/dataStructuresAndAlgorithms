@@ -6,7 +6,7 @@
   - Iterator : net.nopainnocode.dsaa.datastructures.IteratorTest
   - HashMap : net.nopainnocode.dsaa.datastructures.HashMapTest
   - Hashtable : net.nopainnocode.dsaa.datastructures.HashtableTest
-  - 스택 두개로 큐 구현 : 
+  - 스택 두개로 큐 구현 : net.nopainnocode.dsaa.datastructures.ImplementedQueue
 
 * 알고리즘
   - 바이너리 서치 : net.nopainnocode.dsaa.algorithms.BinarySearch
