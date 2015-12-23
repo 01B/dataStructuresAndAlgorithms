@@ -21,8 +21,13 @@ public class SumOfMultiples {
         System.out.println(total);
     }
 
-    private static int doMultiply(int intvalue) {
-        int quotient = 1000 / intvalue;
-        return intvalue * quotient * (quotient + 1) / 2;
+    /**
+     * 1 부터 숫자 n 까지의 합은 n * (n +1) / 2 인 점을 이용하여 각 배수들의 합을 구한다.
+     * @param intValue
+     * @return
+     */
+    private static int doMultiply(int intValue) {
+        int quotient = 1000 / intValue;
+        return intValue * quotient * (quotient + 1) / 2;
     }
 }
