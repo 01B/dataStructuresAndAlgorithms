@@ -5,29 +5,30 @@ package net.nopainnocode.dsaa.algorithms;
  */
 public class BinarySearch {
 
-    public static int binarySearch(int[] intArray, int intValue, int temp) {
+    /**
+     * binary search 를 합니다.
+     * @param arr 검색 배열
+     * @param val 검색하고자 하는 값
+     * @param i 검색 시작 index
+     * @param j 검색 끝 index
+     * @return 값의 index
+     */
+    public static int doBinarySearch(int[] arr, int val, int i, int j) {
 
-        // 중간 인덱스로부터 값을 불러와 앞을 탐색할지 뒤를 탐색할지 결정한다
-        int middleIndex = (intArray.length - 1) / 2;
-        int middleValue = intArray[middleIndex];
-        int sizeOfTempArray = intArray.length % 2 == 0 ? middleIndex + 1 : middleIndex;
+        int midIndex = (i + j)/2;
+        int midVal = arr[midIndex];
 
-        int[] intArrayTemp = new int[sizeOfTempArray];
-
-        if (intValue == middleValue)
-            return temp + sizeOfTempArray;
-
-        if(intValue > middleValue)
-            System.arraycopy(intArray, middleIndex+1,intArrayTemp,0,sizeOfTempArray);
+        if(val > midVal)
+            return doBinarySearch(arr, val, midIndex, j);
+        else if(val < midVal)
+            return doBinarySearch(arr, val, i, midIndex);
         else
-            System.arraycopy(intArray, 0,intArrayTemp,0,sizeOfTempArray - 1);
-
-        return binarySearch(intArrayTemp, intValue, middleIndex);
+            return midIndex;
     }
 
     public static void main(String[] args) {
 
-        int[] intArray = new int[]{2, 5, 8, 20, 45, 100};
-        System.out.println(binarySearch(intArray, 45, 0));
+        int[] arr = new int[]{2, 5, 8, 20, 45, 100};
+        System.out.println(doBinarySearch(arr, 45, 0, arr.length - 1));
     }
 }
