@@ -14,7 +14,8 @@ import java.util.*;
 public class TheGridSearch {
 
     static Scanner scanner;
-    static Map<Integer, Integer> vertexStore = new HashMap<Integer, Integer>();
+    static List<Integer[]> vertexStore = new ArrayList<Integer[]>();
+    //static Map<Integer, Integer> vertexStore = new HashMap<Integer, Integer>();
 
     public static void main(String[] args) {
 
@@ -30,7 +31,7 @@ public class TheGridSearch {
             List<String> out = scan();
             List<String> in = scan();
 
-            System.out.println(check(out, in) > 0);
+            System.out.println(check(out, in) > 0 ? "YES" : "NO");
             testSize--;
         }
     }
@@ -39,9 +40,9 @@ public class TheGridSearch {
         String firstStr = in.get(0);
         findMatchingVertex(out, firstStr);
         int resultCount = 0;
-        for(Map.Entry<Integer, Integer> vertex : vertexStore.entrySet()){
-            int row = vertex.getKey();
-            int col = vertex.getValue();
+        for(Integer[] vertex : vertexStore){
+            int row = vertex[0];
+            int col = vertex[1];
 
             if(check(out, in, row, col))
                 resultCount++;
@@ -56,7 +57,7 @@ public class TheGridSearch {
             String inStr = in.get(j);
             if(row < out.size()) {
                 String outStr = out.get(row++);
-                if (col != outStr.indexOf(inStr))
+                if (col != outStr.indexOf(inStr,col))
                     return false;
             }
         }
@@ -68,8 +69,13 @@ public class TheGridSearch {
         for(int i=0;i<list.size();i++){
             String element = list.get(i);
             for(int j = 0; j < element.length();j++){
-                if(0 < element.indexOf(str,j))
-                    vertexStore.put(i, element.indexOf(str));
+                int index = element.indexOf(str, j);
+                if(0 <= index) {
+                    Integer[] vertex = new Integer[2];
+                    vertex[0] = i;
+                    vertex[1] = index;
+                    vertexStore.add(vertex);
+                }
             }
         }
     }
