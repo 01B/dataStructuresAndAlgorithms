@@ -1,6 +1,9 @@
 # dataStructuresAndAlgorithms
 자료구조와 알고리즘 공부를 위한 프로젝트 입니다.
 
+* 예제
+  - 연산횟구 구하기 : net.nopainnocode.dsaa.algorithms.examples.CalculateNumberOfOperations
+
 * 자료구조
   - Enumeration : net.nopainnocode.dsaa.datastructures.EnumerationTest
   - Iterator : net.nopainnocode.dsaa.datastructures.IteratorTest
