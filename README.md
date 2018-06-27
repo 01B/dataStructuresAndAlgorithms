@@ -14,4 +14,4 @@
 * 알고리즘
   - 바이너리 서치 : net.nopainnocode.dsaa.algorithms.BinarySearch
   - 팩토리얼 : net.nopainnocode.dsaa.algorithms.Factorial
-  - 퀵 정렬 : net.nopainnocode.dsaa.algorithms.QuickSort
+  - 퀵 정렬 : net.nopainnocode.dsaa.algorithms.QuickSort 
