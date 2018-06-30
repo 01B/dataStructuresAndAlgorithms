@@ -12,6 +12,7 @@
   - 스택 두개로 큐 구현 : net.nopainnocode.dsaa.datastructures.ImplementedQueue
 
 * 알고리즘
+  - 바이너리 서치 : net.nopainnocode.dsaa.algorithms.FibonacchiSquence
   - 바이너리 서치 : net.nopainnocode.dsaa.algorithms.BinarySearch
   - 팩토리얼 : net.nopainnocode.dsaa.algorithms.Factorial
   - 퀵 정렬 : net.nopainnocode.dsaa.algorithms.QuickSort 
