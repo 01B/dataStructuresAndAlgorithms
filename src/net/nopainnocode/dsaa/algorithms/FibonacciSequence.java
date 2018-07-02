@@ -39,15 +39,25 @@ public class FibonacciSequence {
         return c;
     }
 
+    /**
+     * 행렬을 이용하는 방법
+     * O(log(N)) 의 시간 복잡도
+     */
     fibonacciMatrix(int N) {
-        a = {{1, 1}, {1, 0}};
-        b = {{1, 0}, {0, 1}};
 
+        a = {{1, 1}, {1, 0}};
+        result = {{1,1}, {1,0}};
         while (N > 0) {
-            if(N % 2 == 1)
-                b = a * b;
-            a = a * a;
-            N = N / 2;
+            if(N == 1) {
+                result = a;
+                break;
+            }
+            else if(N % 2 == 1)
+                result = a * a;
+            else
+                result = result * a;
+
+            N = N/2;
         }
     }
 }
