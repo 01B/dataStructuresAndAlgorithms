@@ -14,7 +14,7 @@ public class QuickSort {
         System.out.println(dataArray);
     }
 
-    public static void doQuickSort(int[] dataArray, int left, int right) {
+    private static void doQuickSort(int[] dataArray, int left, int right) {
 
         int i = left;
         int j = right;

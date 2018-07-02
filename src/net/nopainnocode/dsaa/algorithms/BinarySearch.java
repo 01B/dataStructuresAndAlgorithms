@@ -13,7 +13,7 @@ public class BinarySearch {
      * @param j 검색 끝 index
      * @return 값의 index
      */
-    public static int doBinarySearch(int[] arr, int val, int i, int j) {
+    private static int doBinarySearch(int[] arr, int val, int i, int j) {
 
         int midIndex = (i + j)/2;
         int midVal = arr[midIndex];

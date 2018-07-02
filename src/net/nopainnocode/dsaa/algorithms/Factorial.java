@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class Factorial {
 
-    public static int doFactorial(int i) {
+    private static int doFactorial(int i) {
 
         if (1 == i)
             return 1;
